@@ -1,19 +1,25 @@
+# Install the latest release version of lockgit using brew.
+# brew install jswidler/tap/lockgit
+
+# Dev note: Build new version and upload a draft with the artifacts to GitHub release page with:
+# fgo --pkg build build --draft $(VERSION)
+
 require "rbconfig"
 class Lockgit < Formula
   desc "a CLI tool for storing encrypted secrets in a git repo"
   homepage "https://github.com/jswidler/lockgit"
-  version "0.5.1"
+  version "0.6.0"
 
   if Hardware::CPU.is_64_bit?
     case RbConfig::CONFIG["host_os"]
     when /mswin|msys|mingw|cygwin|bccwin|wince|emc/
       :windows
     when /darwin|mac os/
-      url "https://github.com/jswidler/lockgit/releases/download/v0.5.1/lockgit_0.5.1_darwin_amd64.zip"
-      sha256 "bb54a5db8e22428496ea07dd504050022b86714d9441a81c203edf9d663316f3"
+      url "https://github.com/jswidler/lockgit/releases/download/v0.6.0/lockgit_0.6.0_darwin_amd64.zip"
+      sha256 "23005f0bfa2aec9c6035d0395a1c7057ceb3c5effdea4a9fc7c68d4b3b63e5c4"
     when /linux/
-      url "https://github.com/jswidler/lockgit/releases/download/v0.5.1/lockgit_0.5.1_linux_amd64.tar.gz"
-      sha256 "41e5620c8266fa359aed29bd64739028315977d7165b5cf7963001342b34c01c"
+      url "https://github.com/jswidler/lockgit/releases/download/v0.6.0/lockgit_0.6.0_linux_amd64.tar.gz"
+      sha256 "1ee21f14b025150fddd1fe6b916b2bda8d9dbb379303a14c32f4151e743b84a0"
     when /solaris|bsd/
       :unix
     else
@@ -24,11 +30,11 @@ class Lockgit < Formula
     when /mswin|msys|mingw|cygwin|bccwin|wince|emc/
       :windows
     when /darwin|mac os/
-      url "https://github.com/jswidler/lockgit/releases/download/v0.5.1/lockgit_0.5.1_darwin_386.zip"
-      sha256 "07a898d7bb41b6740d62187e6c74105b0e634ad65c70b897959ec01f549942d1"
+      url "https://github.com/jswidler/lockgit/releases/download/v0.6.0/lockgit_0.6.0_darwin_386.zip"
+      sha256 "1e2a1cfd37603ce707ef396c784472a9d1cc7673fe3edb9320bfc8436417dbe2"
     when /linux/
-      url "https://github.com/jswidler/lockgit/releases/download/v0.5.1/lockgit_0.5.1_linux_386.tar.gz"
-      sha256 "2c4cd974c1282cef384e82db9bd3aa13bd91c5604a458435f2ff5336a873a9c0"
+      url "https://github.com/jswidler/lockgit/releases/download/v0.6.0/lockgit_0.6.0_linux_386.tar.gz"
+      sha256 "ee9e36c73f2823c7e68dfa8513dab0a8244213d0e3838e707b717a66bf030317"
     when /solaris|bsd/
       :unix
     else
