@@ -12,18 +12,18 @@ require "rbconfig"
 class Lockgit < Formula
   desc "a CLI tool for storing encrypted secrets in a git repo"
   homepage "https://github.com/jswidler/lockgit"
-  version "0.6.1"
+  version "0.7.0"
 
   if Hardware::CPU.is_64_bit?
     case RbConfig::CONFIG["host_os"]
     when /mswin|msys|mingw|cygwin|bccwin|wince|emc/
       :windows
     when /darwin|mac os/
-      url "https://github.com/jswidler/lockgit/releases/download/v0.6.1/lockgit_0.6.1_darwin_amd64.zip"
-      sha256 "b5fd8315ff69e7ca1bdd7c6d33f81acc2bffea439e1cdf35f5549b749f261126"
+      url "https://github.com/jswidler/lockgit/releases/download/v0.7.0/lockgit_0.7.0_darwin_amd64.zip"
+      sha256 "dfe4d3a313b980b35f9aa87350fe432d2a96d3a24dcf7e6b02751e37d408e4f4"
     when /linux/
-      url "https://github.com/jswidler/lockgit/releases/download/v0.6.1/lockgit_0.6.1_linux_amd64.tar.gz"
-      sha256 "c9988e6536a06d423d261beb0cd69110b2eceea86ea459257db7a98fcaa96524"
+      url "https://github.com/jswidler/lockgit/releases/download/v0.7.0/lockgit_0.7.0_linux_amd64.tar.gz"
+      sha256 "908df79161051c08072c4525f56ef9401548656be4ceeeb499921dd6a8792945"
     when /solaris|bsd/
       :unix
     else
@@ -34,11 +34,11 @@ class Lockgit < Formula
     when /mswin|msys|mingw|cygwin|bccwin|wince|emc/
       :windows
     when /darwin|mac os/
-      url "https://github.com/jswidler/lockgit/releases/download/v0.6.1/lockgit_0.6.1_darwin_386.zip"
-      sha256 "8239e9d62c4390a357e055a825f8ebc33b99794cb4545531b0ff108f71918b30"
+      url "https://github.com/jswidler/lockgit/releases/download/v0.7.0/lockgit_0.7.0_darwin_386.zip"
+      sha256 "0de75a94fdae5bc120a2eff8d5577dd0dec1c7311f64c44c755adffad24e8313"
     when /linux/
-      url "https://github.com/jswidler/lockgit/releases/download/v0.6.1/lockgit_0.6.1_linux_386.tar.gz"
-      sha256 "2c75f4e42b17737ce22fc2feb5814bb166f7039d94df921963486ad7efbc8e1b"
+      url "https://github.com/jswidler/lockgit/releases/download/v0.7.0/lockgit_0.7.0_linux_386.tar.gz"
+      sha256 "3c7b9e89655a6594f9209d2b8900c4580f47d6408621b030c17310f5d3e12b24"
     when /solaris|bsd/
       :unix
     else
